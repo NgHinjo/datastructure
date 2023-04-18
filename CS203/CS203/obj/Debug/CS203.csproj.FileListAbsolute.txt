@@ -1,0 +1,11 @@
+C:\Users\FF311\Desktop\CS203\CS203\bin\Debug\CS203.exe.config
+C:\Users\FF311\Desktop\CS203\CS203\bin\Debug\CS203.exe
+C:\Users\FF311\Desktop\CS203\CS203\bin\Debug\CS203.pdb
+C:\Users\FF311\Desktop\CS203\CS203\obj\Debug\CS203.csproj.AssemblyReference.cache
+C:\Users\FF311\Desktop\CS203\CS203\obj\Debug\CS203.csproj.SuggestedBindingRedirects.cache
+C:\Users\FF311\Desktop\CS203\CS203\obj\Debug\CS203.Form1.resources
+C:\Users\FF311\Desktop\CS203\CS203\obj\Debug\CS203.Properties.Resources.resources
+C:\Users\FF311\Desktop\CS203\CS203\obj\Debug\CS203.csproj.GenerateResource.cache
+C:\Users\FF311\Desktop\CS203\CS203\obj\Debug\CS203.csproj.CoreCompileInputs.cache
+C:\Users\FF311\Desktop\CS203\CS203\obj\Debug\CS203.exe
+C:\Users\FF311\Desktop\CS203\CS203\obj\Debug\CS203.pdb
