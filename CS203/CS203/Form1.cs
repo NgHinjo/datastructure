@@ -56,7 +56,42 @@ namespace CS203
         {
             if (stopcreate == true) 
             {
+
                 //set or define the adjacent of two nodes
+                int edge1 = Convert.ToInt32(txtedge1.Text);
+                int edge2 = Convert.ToInt32(txtedge2.Text);
+
+                //split the coordinates of x and y of the edge
+                String[] c1 = vertices[edge1].Split('-');
+                String[] c2 = vertices[edge2].Split('-');
+
+                //cast it to integer and store it to another variable
+
+                int xcoordinate1 = Convert.ToInt32(c1[0]); //x coordinate of edge1
+                int ycoordinate1 = Convert.ToInt32(c1[1]); //y coordinate of edge1
+
+                int xcoordinate2 = Convert.ToInt32(c2[0]); //x coordinate of edge2
+                int ycoordinate2 = Convert.ToInt32(c2[1]); //y coordinate of edge2
+
+                //after retrieving the x and y coordinate, we will draw a line
+                graph.DrawLine(new Pen(Brushes.Green, 3), (xcoordinate1+12), (ycoordinate1+12), (xcoordinate2+12),(float)(ycoordinate2+12));
+
+                //calculate distance 
+                double x = (double)(xcoordinate2 - xcoordinate1);
+                double y = (double)(ycoordinate2 - ycoordinate1);
+                double d = Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
+
+                int a = (int)(xcoordinate1 + xcoordinate2) / 2;
+                int b = ((int)(ycoordinate1 + ycoordinate2) / 2) -5;
+
+                graph.DrawString(Math.Round(d, 2).ToString(), new Font("Arial", 12), Brushes.Maroon, a, b);
+
+                //adjacency matrix(undirected graph = no arrow)
+                matrix[edge1, edge2] = Convert.ToInt32(d); //same distance
+                matrix[edge2, edge1] = Convert.ToInt32(d);
+
+                //if it is adjacent display 1 otherwise 0
+
             }
         }
 
@@ -80,11 +115,20 @@ namespace CS203
                 //define the location of x and y coordinate
                 graph.FillEllipse(Brushes.Black, rect);
 
+                vertices[countnodes] = e.X + "-" + e.Y;               
+        
+                //the number will appear based on the nodes created
+                graph.DrawString(countnodes.ToString(), new Font("Arial", 12), Brushes.White, e.X + 12, e.Y + 12);
+                
                 //the number and color of the nodes
                 countnodes++;
 
-                //the number will appear based on the nodes created
-                graph.DrawString(countnodes.ToString(), new Font("Arial", 12), Brushes.White, e.X + 12, e.Y + 12);
+                //increment another node to draw in the datagridview
+                dataGridView1.Columns.Add("", (countnodes - 1).ToString());
+                dataGridView1.AutoResizeColumns();
+                dataGridView1.Rows.Add();
+                dataGridView1.Rows[countnodes -1].HeaderCell.Value = (countnodes - 1).ToString();
+                dataGridView1.AutoResizeRows();
 
             }
             else 
@@ -93,6 +137,12 @@ namespace CS203
                 stopcreate = true;
             }
         }
+
+        /**public void Matrix()
+        {
+                 
+        }**/
+
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {

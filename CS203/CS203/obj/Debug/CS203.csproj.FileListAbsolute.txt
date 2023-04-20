@@ -9,3 +9,14 @@ C:\Users\FF311\Desktop\CS203\CS203\obj\Debug\CS203.csproj.GenerateResource.cache
 C:\Users\FF311\Desktop\CS203\CS203\obj\Debug\CS203.csproj.CoreCompileInputs.cache
 C:\Users\FF311\Desktop\CS203\CS203\obj\Debug\CS203.exe
 C:\Users\FF311\Desktop\CS203\CS203\obj\Debug\CS203.pdb
+Z:\FF311\DEGAMO, NICHOL ANGELO\finals\CS203\CS203\bin\Debug\CS203.exe.config
+Z:\FF311\DEGAMO, NICHOL ANGELO\finals\CS203\CS203\bin\Debug\CS203.exe
+Z:\FF311\DEGAMO, NICHOL ANGELO\finals\CS203\CS203\bin\Debug\CS203.pdb
+Z:\FF311\DEGAMO, NICHOL ANGELO\finals\CS203\CS203\obj\Debug\CS203.csproj.AssemblyReference.cache
+Z:\FF311\DEGAMO, NICHOL ANGELO\finals\CS203\CS203\obj\Debug\CS203.csproj.SuggestedBindingRedirects.cache
+Z:\FF311\DEGAMO, NICHOL ANGELO\finals\CS203\CS203\obj\Debug\CS203.Form1.resources
+Z:\FF311\DEGAMO, NICHOL ANGELO\finals\CS203\CS203\obj\Debug\CS203.Properties.Resources.resources
+Z:\FF311\DEGAMO, NICHOL ANGELO\finals\CS203\CS203\obj\Debug\CS203.csproj.GenerateResource.cache
+Z:\FF311\DEGAMO, NICHOL ANGELO\finals\CS203\CS203\obj\Debug\CS203.csproj.CoreCompileInputs.cache
+Z:\FF311\DEGAMO, NICHOL ANGELO\finals\CS203\CS203\obj\Debug\CS203.exe
+Z:\FF311\DEGAMO, NICHOL ANGELO\finals\CS203\CS203\obj\Debug\CS203.pdb
