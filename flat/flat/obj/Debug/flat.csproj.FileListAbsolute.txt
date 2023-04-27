@@ -20,3 +20,14 @@ C:\Users\User\Desktop\flat\flat\obj\Debug\flat.pdb
 C:\Users\User\Desktop\flat\flat\bin\Debug\flat.exe.config
 C:\Users\User\Desktop\flat\flat\bin\Debug\flat.exe
 C:\Users\User\Desktop\flat\flat\bin\Debug\flat.pdb
+C:\Users\FF311\Desktop\data\flat\flat\bin\Debug\flat.exe.config
+C:\Users\FF311\Desktop\data\flat\flat\bin\Debug\flat.exe
+C:\Users\FF311\Desktop\data\flat\flat\bin\Debug\flat.pdb
+C:\Users\FF311\Desktop\data\flat\flat\obj\Debug\flat.csproj.AssemblyReference.cache
+C:\Users\FF311\Desktop\data\flat\flat\obj\Debug\flat.csproj.SuggestedBindingRedirects.cache
+C:\Users\FF311\Desktop\data\flat\flat\obj\Debug\flat.Form1.resources
+C:\Users\FF311\Desktop\data\flat\flat\obj\Debug\flat.Properties.Resources.resources
+C:\Users\FF311\Desktop\data\flat\flat\obj\Debug\flat.csproj.GenerateResource.cache
+C:\Users\FF311\Desktop\data\flat\flat\obj\Debug\flat.csproj.CoreCompileInputs.cache
+C:\Users\FF311\Desktop\data\flat\flat\obj\Debug\flat.exe
+C:\Users\FF311\Desktop\data\flat\flat\obj\Debug\flat.pdb
