@@ -1,0 +1,7 @@
+node color : hotpink
+line color : white
+picGraph : Thistle
+
+221, 537 max
+
+82, 537 min
