@@ -1,6 +1,6 @@
 ﻿namespace Flat_v._00._1
 {
-    partial class Form1
+    partial class DFS
     {
         /// <summary>
         /// Required designer variable.
@@ -473,9 +473,9 @@
             this.lblpath.ForeColor = System.Drawing.Color.Black;
             this.lblpath.Location = new System.Drawing.Point(591, 295);
             this.lblpath.Name = "lblpath";
-            this.lblpath.Size = new System.Drawing.Size(110, 21);
+            this.lblpath.Size = new System.Drawing.Size(49, 21);
             this.lblpath.TabIndex = 8;
-            this.lblpath.Text = "Traversal Path";
+            this.lblpath.Text = "Stack";
             // 
             // label6
             // 
@@ -548,7 +548,7 @@
             this.picGraph.TabStop = false;
             this.picGraph.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picGraph_MouseClick);
             // 
-            // Form1
+            // DFS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -567,7 +567,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "DFS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Sidebar.ResumeLayout(false);

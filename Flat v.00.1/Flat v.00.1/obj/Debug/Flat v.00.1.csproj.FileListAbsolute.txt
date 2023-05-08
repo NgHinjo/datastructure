@@ -20,3 +20,15 @@ C:\Users\User\Desktop\Flat v.00.1\Flat v.00.1\obj\Debug\Flat v.00.1.csproj.Gener
 C:\Users\User\Desktop\Flat v.00.1\Flat v.00.1\obj\Debug\Flat v.00.1.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Flat v.00.1\Flat v.00.1\obj\Debug\Flat v.00.1.exe
 C:\Users\User\Desktop\Flat v.00.1\Flat v.00.1\obj\Debug\Flat v.00.1.pdb
+C:\Users\User\Desktop\datastructure-main\Flat v.00.1\Flat v.00.1\bin\Debug\Flat v.00.1.exe.config
+C:\Users\User\Desktop\datastructure-main\Flat v.00.1\Flat v.00.1\bin\Debug\Flat v.00.1.exe
+C:\Users\User\Desktop\datastructure-main\Flat v.00.1\Flat v.00.1\bin\Debug\Flat v.00.1.pdb
+C:\Users\User\Desktop\datastructure-main\Flat v.00.1\Flat v.00.1\obj\Debug\Flat v.00.1.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\datastructure-main\Flat v.00.1\Flat v.00.1\obj\Debug\Flat v.00.1.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\datastructure-main\Flat v.00.1\Flat v.00.1\obj\Debug\Flat_v._00._1.Form1.resources
+C:\Users\User\Desktop\datastructure-main\Flat v.00.1\Flat v.00.1\obj\Debug\Flat_v._00._1.Properties.Resources.resources
+C:\Users\User\Desktop\datastructure-main\Flat v.00.1\Flat v.00.1\obj\Debug\Flat v.00.1.csproj.GenerateResource.cache
+C:\Users\User\Desktop\datastructure-main\Flat v.00.1\Flat v.00.1\obj\Debug\Flat v.00.1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\datastructure-main\Flat v.00.1\Flat v.00.1\obj\Debug\Flat v.00.1.exe
+C:\Users\User\Desktop\datastructure-main\Flat v.00.1\Flat v.00.1\obj\Debug\Flat v.00.1.pdb
+C:\Users\User\Desktop\datastructure-main\Flat v.00.1\Flat v.00.1\obj\Debug\Flat_v._00._1.DFS.resources

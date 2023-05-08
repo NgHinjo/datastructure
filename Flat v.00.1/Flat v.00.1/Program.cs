@@ -16,7 +16,7 @@ namespace Flat_v._00._1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new DFS());
         }
     }
 }

@@ -13,34 +13,27 @@ using System.Windows.Forms;
 
 namespace Flat_v._00._1
 {
-    public partial class Form1 : Form
-    {
+    public partial class DFS : Form {
         //for timer
         bool sidebarExpand;
 
-        public Form1()
-        {
+        public DFS() {
             InitializeComponent();
             setclear();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
+        private void btnSave_Click(object sender, EventArgs e) {
             SaveFileDialog sd = new SaveFileDialog(); //initialize the save dialog
             sd.Filter = "Text Documents (*.txt)|*.txt";
 
-            if (sd.ShowDialog() == DialogResult.OK)
-            {
+            if (sd.ShowDialog() == DialogResult.OK) {
                 StreamWriter sw = new StreamWriter(sd.FileName, true);
                 String nodes = "";
 
-                for (int i = 0; i < countnodes; i++)
-                {
+                for (int i = 0; i < countnodes; i++) {
                     nodes = i + "-" + vertices[i];
-                    for (int j = 0; j < countnodes; j++)
-                    {
-                        if (matrix[i, j] != 0)
-                        {
+                    for (int j = 0; j < countnodes; j++) {
+                        if (matrix[i, j] != 0) {
                             nodes = nodes + "\t" + j + "-" + vertices[j];
                         }
                     }
@@ -52,55 +45,45 @@ namespace Flat_v._00._1
         }
 
         //side bar slide in/out
-        private void Sidebar_tick(object sender, EventArgs e)
-        {
+        private void Sidebar_tick(object sender, EventArgs e) {
             //set the minimum and maximum size of sidebar panel
 
-            if (sidebarExpand)
-            {
+            if (sidebarExpand) {
                 //if sidebar is expand, minimize!
                 Sidebar.Width -= 10;
-                if (Sidebar.Width == Sidebar.MinimumSize.Width)
-                {
+                if (Sidebar.Width == Sidebar.MinimumSize.Width) {
                     sidebarExpand = false;
                     sidebarTimer.Stop();
                 }
-               
+
 
             }
-            else 
-            {
+            else {
                 Sidebar.Width += 10;
-                if (Sidebar.Width == Sidebar.MaximumSize.Width)
-                {
+                if (Sidebar.Width == Sidebar.MaximumSize.Width) {
                     sidebarExpand = true;
                     sidebarTimer.Stop();
                 }
             }
         }
 
-        private void Menubutton_Click(object sender, EventArgs e)
-        {
+        private void Menubutton_Click(object sender, EventArgs e) {
             sidebarTimer.Start();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+        private void button2_Click(object sender, EventArgs e) {
             Application.Restart();
         }
 
-        private void lblclose_Click(object sender, EventArgs e)
-        {
+        private void lblclose_Click(object sender, EventArgs e) {
             Application.Exit();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
+        private void button3_Click(object sender, EventArgs e) {
             MessageBox.Show("#速度与激情9#\r\n早上好中国\r\n现在我有冰激淋 我很喜欢冰激淋\r\n但是《速度与激情9》比冰激淋……\r\n\r\n🍦");
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
+        private void button4_Click(object sender, EventArgs e) {
             MessageBox.Show("BFS Traversal Final Project by Nichol Angelo I. Degamo");
         }
 
@@ -113,27 +96,19 @@ namespace Flat_v._00._1
         int row = 0, col = 0;
 
         //create methods
-        private void setAdjacentMatrixToZero(int nodeCount)
-        {
-            for (int x = 0; x < nodeCount; x++)
-            {
-                for (int y = 0; y < nodeCount; y++)
-                {
-                    if (dataGridView1.Rows[x].Cells[y].Value == null)
-                    {
+        private void setAdjacentMatrixToZero(int nodeCount) {
+            for (int x = 0; x < nodeCount; x++) {
+                for (int y = 0; y < nodeCount; y++) {
+                    if (dataGridView1.Rows[x].Cells[y].Value == null) {
                         dataGridView1.Rows[x].Cells[y].Value = 0;
                     }
                 }
             }
         }
-        private void setAdjacentMatrixToOne(int edge1, int edge2)
-        {
-            for (int x = 0; x < countnodes; x++)
-            {
-                for (int y = 0; y < countnodes; y++)
-                {
-                    if (edge1 == x && edge2 == y)
-                    {
+        private void setAdjacentMatrixToOne(int edge1, int edge2) {
+            for (int x = 0; x < countnodes; x++) {
+                for (int y = 0; y < countnodes; y++) {
+                    if (edge1 == x && edge2 == y) {
                         dataGridView1.Rows[edge1].Cells[edge2].Value = 1;
                         dataGridView1.Rows[edge2].Cells[edge1].Value = 1;
                     }
@@ -141,8 +116,7 @@ namespace Flat_v._00._1
             }
         }
 
-        public void setclear()
-        {
+        public void setclear() {
             graph = picGraph.CreateGraphics();
             stopcreate = false;
             matrix = new int[50, 50];
@@ -150,15 +124,13 @@ namespace Flat_v._00._1
             countnodes = 0;
         }
 
-        private void btnCreateNode_Click(object sender, EventArgs e)
-        {
+        private void btnCreateNode_Click(object sender, EventArgs e) {
             lblStopped.Visible = false;
             lblcreatetext.Visible = true;
             stopcreate = false;
         }
 
-        private void btnAdjacentNode_Click(object sender, EventArgs e)
-        {
+        private void btnAdjacentNode_Click(object sender, EventArgs e) {
 
             try {
                 int edge1 = Convert.ToInt32(cmbEdge1.Text);
@@ -195,25 +167,21 @@ namespace Flat_v._00._1
 
                     setAdjacentMatrixToOne(edge1, edge2);
                 }
-                else if (edge1 >= countnodes || edge2 >= countnodes) 
-                {
+                else if (edge1 >= countnodes || edge2 >= countnodes) {
                     MessageBox.Show("Error!");
                 }
             }
-            catch(Exception x) 
-            {
+            catch (Exception x) {
                 MessageBox.Show("Error!");
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        private void button1_Click(object sender, EventArgs e) {
             OpenFileDialog od = new OpenFileDialog(); //initialize
             od.Filter = "Text Document(*.txt)|*.txt"; //file extension
             od.ValidateNames = true; //validation
 
-            if (od.ShowDialog() == DialogResult.OK)
-            {
+            if (od.ShowDialog() == DialogResult.OK) {
                 setclear();
                 cmbEdge1.Items.Clear();
                 cmbEdge2.Items.Clear();
@@ -225,14 +193,12 @@ namespace Flat_v._00._1
                 Graphics g = picGraph.CreateGraphics();
                 g.Clear(Color.Silver);
 
-                try
-                {
+                try {
                     String line = "";
                     StreamReader sr = new StreamReader(od.FileName);
 
-                    while (sr.Peek() != -1)
-                    {
-                       
+                    while (sr.Peek() != -1) {
+
                         countnodes++;
 
                         dataGridView1.Columns.Add("", (countnodes - 1).ToString());
@@ -254,8 +220,7 @@ namespace Flat_v._00._1
                         g.FillEllipse(Brushes.HotPink, rect);
                         g.DrawString(node1.ToString(), new Font("Arial", 7), Brushes.White, x1 + 8, y1 + 8);
 
-                        for (int i = 1; i < adjacent.Length; i++)
-                        {
+                        for (int i = 1; i < adjacent.Length; i++) {
                             nodes = adjacent[i].Split('-');
                             int node2 = Convert.ToInt32(nodes[0]);
                             int x2 = Convert.ToInt32(nodes[1]);
@@ -287,17 +252,14 @@ namespace Flat_v._00._1
                     }
 
                 }
-                catch (Exception ex)
-                {
+                catch (Exception ex) {
                     MessageBox.Show(ex.ToString());
                 }
             }
         }
 
-        private void picGraph_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left && stopcreate != true)
-            {
+        private void picGraph_MouseClick(object sender, MouseEventArgs e) {
+            if (e.Button == MouseButtons.Left && stopcreate != true) {
                 //when you click the mouse at the leftside
                 Rectangle rect = new Rectangle(e.X, e.Y, 25, 25);
 
@@ -323,11 +285,10 @@ namespace Flat_v._00._1
                 dataGridView1.Rows.Add();
                 dataGridView1.Rows[countnodes - 1].HeaderCell.Value = (countnodes - 1).ToString();
                 dataGridView1.AutoResizeRows();
-                
+
                 setAdjacentMatrixToZero(countnodes);
             }
-            else
-            {
+            else {
                 //right click the node will stop creating
                 lblStopped.Visible = true;
                 lblcreatetext.Visible = false;
@@ -335,14 +296,12 @@ namespace Flat_v._00._1
             }
         }
 
-        private void btnTraverse_Click(object sender, EventArgs e)
-        {          
-            BFSTraversal();                   
-           
+        private void btnTraverse_Click(object sender, EventArgs e) {
+            DFSTraversal();        
+
         }
 
-        private void lblClear_Click(object sender, EventArgs e)
-        {
+        private void lblClear_Click(object sender, EventArgs e) {
             // clears the pic graph
             picGraph.Image = null;
             groupGIF.Visible = true;
@@ -375,76 +334,47 @@ namespace Flat_v._00._1
             setclear();
         }
 
-        //BFS psuedocode
+        //DBFS psuedocode
 
-        /*  BFS(graph, start):
+        /*  DFS(graph G, Node v, set visited)
          *  
-         *      queue = create a new queue 
-         *      visited = create a new set
+         *      add v to visited set
+         *      neighbors = G[v]
          *      
-         *      enqueue (source, source)
+         *      while neighbor is not empty:
          *      
-         *      add start to visited 
+         *      w = neighbors.pop()
          *      
-         *      while queue is not empty:
+         *      if w not in visited
          *      
-         *          current = dequeue(queue)
-         *          for i in graph[current] :
-         *          if neighbor is not 0 and not visited:
-         *                     add neighbor to visited
-         *                     enqueue(queue, neighbor)
+         *          DFS(G,W,visited)
          * 
          */
 
-        public void BFSTraversal()
-        {
+        public void DFSTraversal() {
             try {
                 //setting nodes as source and destination in the textbox
                 int source = Convert.ToInt32(cmbSource.Text);
                 int destination = Convert.ToInt32(cmbDestination.Text);
 
-                Queue<int> queue = new Queue<int>(); //queue = create a new queue
+                Stack<int> stack = new Stack<int>(); //stack = create a new stack
                 HashSet<int> visited = new HashSet<int>(); //visited = create a new set
 
-
-                //color node
-                colornodes(source, Brushes.DarkOrange);
-                colornodes(destination, Brushes.Red);
-
-                queue.Enqueue(source); //enqueue (source, source)
+                stack.Push(source); //push(source, stack)
                 visited.Add(source);
 
-                //thread
-                Thread.Sleep(150);
-
-
-                while (queue.Count > 0) //while queue is not empty:
+                while (stack.Count > 0) //while stack is not empty:
                 {
-                    int current = queue.Dequeue(); //current = dequeue(queue)
-
-
-                    Thread.Sleep(500);
-                    colornodes(current, Brushes.DarkGreen);
-
+                    int current = stack.Pop(); //current = pop(stack)
 
                     for (int i = 0; i < countnodes; i++) //for neighbor in graph[current]:
                     {
-
-                        Thread.Sleep(150);
-
                         if (matrix[current, i] != 0 && !visited.Contains(i)) //if neighbor is not 0 and not visited:
                         {
-                            visited.Add(i);  //add neighbor to visited
-                            queue.Enqueue(i);     //enqueue(queue, neighbor)
+                            visited.Add(i); //add neighbor to visited
+                            stack.Push(i); //push(neighbor, stack)
                         }
                     }
-
-
-                    //MessageBox.Show("Path is " + current);
-                    colornodes(current, Brushes.Blue);
-                    colornodes(source, Brushes.DarkOrange);
-                    colornodes(destination, Brushes.Red);
-
 
                     lblpath.Text += " " + current + " ";
 
@@ -454,28 +384,12 @@ namespace Flat_v._00._1
                     }
                 }
             }
-            catch 
-            {
+            catch {
                 MessageBox.Show("Error!");
             }
         }
 
-        //color nodes + animation
-        private void colornodes(int node, Brush c)
-        {
-            String[] s = vertices[node].Split('-');
 
-            int x = Convert.ToInt32(s[0]); // x coordinate to edge1
-            int y = Convert.ToInt32(s[1]); // x coordinate to edge2
-
-            Rectangle rect = new Rectangle(x, y, 25, 25);
-            graph.FillEllipse(c, rect);
-            graph.DrawString(node.ToString(), new Font("Arial", 7), Brushes.White, new PointF(x + 8, y + 8));
-
-            //Line animation
-
-
-        }
     }
 
 }
